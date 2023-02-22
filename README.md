@@ -8,4 +8,6 @@
 
 # Installation Guide:
 
+# Requirements : [Legacy Fuel by InZidiuZ](https://github.com/InZidiuZ/LegacyFuel)
+
          Simple, just drag and drop into your resources folder and add " ensure vipeer-hud "
