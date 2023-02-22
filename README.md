@@ -8,4 +8,4 @@ A Better HUD that shows location, time, fuel and have a fluid animation to the s
 
 # Installation Guide:
 
-        # Simple, just drag and drop into your resources folder and add " ensure vipeer-hud "
+         Simple, just drag and drop into your resources folder and add " ensure vipeer-hud "
