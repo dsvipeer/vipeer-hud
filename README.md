@@ -5,11 +5,12 @@
 
 # Preview Speedometer and HUD: https://streamable.com/bgaamm
 
+## :eyes: **Preview** 
 # Preview Fuel HUD: https://streamable.com/5at6ir
 
 ## :inbox_tray: **Installation**
-- Install Legacy Fuel if you do not already have it.
-- Simple, just drag and drop into your resources folder and add " ensure vipeer-hud "
+# - Install Legacy Fuel if you do not already have it.
+# - Simple, just drag and drop into your resources folder and add " ensure vipeer-hud "
 
 
 # Requirements : [Legacy Fuel by InZidiuZ](https://github.com/InZidiuZ/LegacyFuel)
