@@ -7,8 +7,9 @@
 
 # Preview Fuel HUD: https://streamable.com/5at6ir
 
-# Installation Guide:
+## :inbox_tray: **Installation**
+- Install Legacy Fuel if you do not already have it.
+- Simple, just drag and drop into your resources folder and add " ensure vipeer-hud "
+
 
 # Requirements : [Legacy Fuel by InZidiuZ](https://github.com/InZidiuZ/LegacyFuel)
-
-         Simple, just drag and drop into your resources folder and add " ensure vipeer-hud "
