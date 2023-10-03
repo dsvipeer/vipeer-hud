@@ -11,6 +11,14 @@ local months = {
     "September", "October", "November", "December"
 }
 
+local directionMapping = {
+    [0] = "North",
+    [45] = "West",
+    [135] = "South",
+    [225] = "East",
+    [315] = "North"
+}
+
 function calculateTimeDisplay()
     hour = GetClockHours()
     minute = GetClockMinutes()
@@ -26,20 +34,14 @@ function calculateTimeDisplay()
     end
 end
 
-
 function ToggleHud()
     showHud = not showHud
-    if not showHud then
-        DisplayRadar(false) 
-    else
-        DisplayRadar(true) -
-    end
+    DisplayRadar(showHud)
 end
 
 RegisterCommand('togglehud', function()
     ToggleHud()
 end, false)
-
 
 RegisterKeyMapping('togglehud', 'Toggle HUD', 'keyboard', '')
 
@@ -85,17 +87,7 @@ Citizen.CreateThread(function()
                 local speed = GetEntitySpeed(vehicle) * 3.6
 
                 local direction = GetEntityHeading(ped)
-                local directionText = ""
-
-                if direction >= 315 or direction < 45 then
-                    directionText = "North"
-                elseif direction >= 45 and direction < 135 then
-                    directionText = "West"
-                elseif direction >= 135 and direction < 225 then
-                    directionText = "South"
-                elseif direction >= 225 and direction < 315 then
-                    directionText = "East"
-                end
+                local directionText = directionMapping[math.floor((direction + 45) / 90) * 90]
 
                 SendNUIMessage({
                     hud = showHud,
