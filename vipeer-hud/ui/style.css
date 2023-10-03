@@ -1,0 +1,343 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+@font-face {
+	font-family: 'PFDinDisplayPro-Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('PFDinDisplayPro-Regular'), url('PFDinDisplayPro-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'PFDinDisplayPro-Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('PFDinDisplayPro-Bold'), url('PFDinDisplayPro-Bold.woff') format('woff');
+}
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+main{
+    width: 250px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 1s;
+    padding-bottom: 40px;
+    top: calc(100% - 125px);
+    margin-top: 5px;
+    left: 0px;
+}
+
+/* ---------------------------------------------- */
+
+header {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+header .leftContent {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.infoText {
+    position: relative;
+    color: #fff;
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    align-items: center;
+    margin-bottom: 10px;
+	font-family: 'PFDinDisplayPro-Bold';
+}
+
+.infoText p,
+.qTalks {
+    position: relative;
+    z-index: -1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 5px;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.407);
+}
+
+.infoText .icon,
+.radio {
+    position: relative;
+    right: -3px;
+    padding: 10px;
+    display: flex;
+    font-size: 12px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    background-color: #224EF2;
+}
+
+.qTalks {
+    padding: 9px 9px;
+}
+
+.clock {
+    margin-left: 5px;
+}
+
+.radio img {
+    margin-right: 5px;
+}
+
+.infoText img {
+    height: 14px;
+}
+
+.talking-container {
+    position: relative;
+    display: flex;
+    transition: all 1s;
+}
+
+.talking-container i {
+    color: #fff;
+    font-size: 12px;
+}
+
+.qTalk {
+    width: 13px;
+    height: 13px;
+    margin-left: 5px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.234);
+}
+
+.qTalk:nth-child(2) {
+    margin-left: 10px;
+}
+
+
+/* ---------------------------------------------- */
+
+.carHud-container {
+    position: relative;
+    right: -50px;
+    height: 100%;
+    width: 300px;
+    display: flex;
+    transform: scale(1.05);
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    transition: all 1s;
+}
+
+.veloBar {
+    height: 123px;
+    width: 187px;
+    clip-path: path('M0 0L41.1187 0.5V0.5C88.4103 4.47548 125.609 42.5722 128.456 89.9452L129 99H123.497L121.761 84.7742C116.496 41.6376 84.2036 11.6726 41.1187 6V6H19.5H0V0Z');
+    background-color: rgba(255, 255, 255, 0.200);
+    position: absolute;
+}
+
+.veloFill {
+    position: absolute;
+    bottom: 20px;
+    width: 100vh;
+    transition: all .5s;
+    background-color: #224EF2;
+}
+
+.veloText {
+    display: flex;
+    margin-right: 95px;
+    margin-bottom: 30px;
+    flex-direction: column;
+}
+
+.veloText h1 {
+    color: white;
+    font-family: 'PFDinDisplayPro-Bold';
+    font-size: 42px;
+    margin-bottom: 7px;
+}
+
+.veloText img {
+    height: 15px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+
+.gasText img {
+    filter: invert(0);
+}
+
+.defaultVelo {
+    color: rgba(255, 255, 255, 0.335);
+}
+
+.kmText {
+    font-size: 16px;
+    margin-left: 2px;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.335);
+    font-family: 'PFDinDisplayPro-Regular' !important;
+}
+
+.vehicleImgs {
+    display: flex;
+    margin-top: -8px;
+    align-items: center;
+}
+
+/* ------------------------------------------------- */
+
+.gasText img{
+    height: 15px;
+    margin-right: 5px;
+}
+
+.gasText p {
+    font-size: 14px;
+    color: white;
+    font-family: 'PFDinDisplayPro-Regular';
+}
+
+.gasText p span {
+    color: rgba(255, 255, 255, 0.335);
+}
+
+.gasText .gasInfo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    top: 10px;
+    opacity: 70%;
+    height: 150px;
+    position: absolute;
+    align-self: flex-start;
+}
+
+/* ------------------------------------------------- */
+
+.hud {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.playerInfos-container {
+    display: flex;
+    height: 70px;
+    width: fit-content;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+
+.fill {
+    height: 100%;
+    display: flex;
+    padding: 0 6px;
+    align-items: center;
+    background: #224EF2;
+    border-radius: 4px;
+    transition: all .5s;
+}
+
+/* ------------------------------------------------- */
+
+hotkey {
+	position: absolute;
+	top: 50%;
+	right: 50px;
+	display: flex;
+    padding: 10px;
+    border-radius: 5px;
+	flex-direction: column;
+	transform: translate(0,-50%) scale(1.2);
+    font-family: 'PFDinDisplayPro-Regular';
+    border: solid 1.5px rgba(255, 255, 255, 0.274);
+    background-color: rgba(148, 134, 134, 0.117);
+}
+
+hotkey .itemkey {
+	color: rgb(255, 255, 255);
+	display: flex;
+	font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+	margin-bottom: 10px;
+	align-items: center;
+}
+
+hotkey .itemkey:last-child {
+	margin: 0;
+}
+
+hotkey .itemkey .key {
+    display: flex;
+	min-width: 20px;
+	padding: 4px 7px;
+    font-weight: bold;
+	margin-right: 7px;
+	align-items: center;
+    border-radius: 4px;
+	letter-spacing: 1px;
+	justify-content: center;
+	background-color: #224EF2;
+}
+
+hotkey .sss {
+    width: 100%;
+    display: flex;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    /* background-color: #224ff2ba; */
+}
+
+hotkey .line {
+    height: 1px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    background-color: rgba(255, 255, 255, 0.200);
+}
+
+hotkey .sss .key {
+    background-color: rgba(255, 255, 255, 0.234);
+}
